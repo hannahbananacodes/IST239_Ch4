@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4 Assignment</title>
+
+    <script>
+        function input_output() {
+            let hours = parseFloat(prompt("Enter number of hours worked:"));
+            let rate = parseFloat(prompt("Enter your hourly pay rate: ($)"));
+            let tax = parseFloat(prompt("Enter your tax rate: (%)"));
+            let bonus = parseFloat(prompt("Enter your bonus amount: ($)"));
+            document.write("<h1>Pay Calculator</h1>");
+            document.write("<h2>Hours Worked: " + hours + "</h2>");
+            document.write("<h2>Hourly Pay Rate: $" + rate.toFixed(2) + "</h2>");
+            document.write("<h2>Tax Rate: " + tax +"%</h2>");
+            document.write("<h2>Bonus: $" + bonus.toFixed(2) + "</h2>");
+            calculate_pay(rate, hours, bonus, tax); 
+            document.write("<h2>Net Pay: $" + net.toFixed(2) + "</h2>");
+        }
+
+        function calculate_pay(payRate, workedHours, bonusAmount, taxRate) {
+            var grossPay = (payRate * workedHours) + bonusAmount;
+            var taxAmount = grossPay * (taxRate / 100);
+            var netPay = grossPay - taxAmount; 
+            return net = netPay;
+        }
+    </script>
+</head>
+<body style="background-color: lightyellow;">
+    <script>
+       input_output();
+    </script>
+</body>
+</html>
